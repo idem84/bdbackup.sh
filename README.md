@@ -57,7 +57,8 @@ MAILTO="alert@site.ru"
 
 Все готово.
 
-###Напишу еще немного по поводу работы с lftp, за синхронизацию резервных файлов отвечаем самая последняя строчка в скрипте:
+###Напишу еще немного по поводу работы с lftp:
+За синхронизацию резервных файлов отвечает самая последняя строчка в скрипте
 
 ```html
 lftp -e 'mirror --only-newer --reverse --no-empty-dirs --log /var/log/mirror.log --parallel=10 /tmp/backups/mysql /site/mysql; bye;' -u user,password ip address
